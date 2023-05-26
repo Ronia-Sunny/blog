@@ -1,14 +1,15 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Navbar from '../components/Navbar';
+// import Navbar from './components/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import Add from './components/Add';
 import Home from './components/Home';
-
+import Navbar from './components/Navbar';
+import React from 'react';
 
 
 function App() {
-  return (
+  return(
     <div className="App">
       <Navbar/><br/><br/>
       <Routes>
@@ -16,7 +17,7 @@ function App() {
         <Route path='/Add' element={<Add/>}/>
       </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

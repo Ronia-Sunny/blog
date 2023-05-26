@@ -7,7 +7,7 @@ const Add = () => {
         <TextField variant='outlined' label='Blog Name'/><br /><br />
         <TextField variant='outlined' label='Description'/><br /><br />
         <TextField variant='outlined' label='Author'/><br /><br />
-        <Button variant ='contained' color='success'>ADD</Button>
+        <Button variant ='filled' color='success'>ADD</Button>
 
     </div>
   )

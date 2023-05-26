@@ -5,7 +5,7 @@ import axios from 'axios'
 const Home = () => {
   var[names,setNames]=useState([]);
   useEffect(()=>{
-    axios.get("https://jsonplaceholder.typicode.com/posts")
+    axios.get("http://jsonplaceholder.typicode.com/posts")
     .then((response)=>{
       setNames(response.data);
       console.log(response.data);
@@ -13,7 +13,7 @@ const Home = () => {
     .catch(err=>console.log(err))
   },[])
   return (
-    <div> style={{paddingTop:"40px"}}
+    <div style={{paddingTop:"40px"}}>
     <TableContainer>
       <Table>
         <TableHead>
@@ -29,6 +29,7 @@ const Home = () => {
           {names.map((value,index)=>{
             return(
               <TableRow>
+                <TableCell>{value.id}</TableCell>
                 <TableCell>{value.title}</TableCell>
               </TableRow>
             )
